@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #951e3a;
+  --text: #ffff;
+  --text-gray: #b7becb;
+  --text-dark: #0c3980;
+  --bg: #ffffff;
+}
+
+body {
+  font-family: "Alexandria", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero .banner {
+  padding: 150px 0 0 0;
+  gap: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Button animation*/
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 22px;
+  border: none;
+  margin-top: 20px !important;
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.btn.btn2 {
+  padding: 0 20px 0 5px;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 40px; /* Start from the right side */
+  width: 0; /* Start with no width */
+  height: 100%; /* Full height */
+  background-color: var(--primary-color); /* Fill color on hover */
+  z-index: 0;
+  transition: all 0.5s ease-in-out; /* Transition duration for :before */
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.btn .i {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 1s ease-out;
+
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+.btn button {
+  position: relative;
+  z-index: 1; /* Ensure text is above the animation */
+
+  width: 100%;
+}
+
+.i i {
+  padding: 12px;
+}
+
+.btn:hover:before {
+  width: calc(100% + 50px); /* Expand to fill the button */
+}
+.btn:hover button {
+  color: var(--text);
+}
+.btn:hover i {
+  transform: rotate(-45deg);
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+.btn:hover .i {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*****************/
+
+/*About section*/
+.hero {
+  margin-bottom: 100px;
+}
+.hero .container {
+  padding: 50px 30px !important;
+  border-radius: 100px 10px 100px 10px;
+  -webkit-border-radius: 100px 10px 100px 10px;
+  -moz-border-radius: 100px 10px 100px 10px;
+  -ms-border-radius: 100px 10px 100px 10px;
+  -o-border-radius: 100px 10px 100px 10px;
+}
+
+/*current projects*/
+.curr .container {
+  padding: 50px 80px 120px 80px !important;
+}
+
+.proj {
+  margin-bottom: 38px;
+}
+.his {
+  margin-top: 18px;
+}
+
+/*Arrow button styling*/
+
+.arrow,
+.arrow2 {
+  border-radius: 50%;
+  border: solid 1px var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.arrow2 {
+  padding: 25px;
+}
+
+.arrow::before,
+.arrow2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.arrow2.left::before {
+  transform: translateX(-100%);
+}
+
+.arrow:hover::before,
+.arrow2:hover::before {
+  transform: translateX(0);
+}
+
+.arrow i,
+.arrow2 i {
+  position: relative;
+  transform: rotate(-45deg);
+  color: var(--primary-color);
+  font-size: 20px;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.arrow2 i {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.arrow:hover i,
+.arrow2:hover i {
+  color: var(--text);
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+/*slider*/
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.slider img {
+  width: 100%;
+  /* Adjust as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  margin: auto;
+}
+.slick-center {
+  transform: scale(1) !important;
+  transition: transform 0.5s ease;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+}
+
+.slick-slide {
+  transition: transform 0.5s ease;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+
+.slick-center ~ .slick-slide {
+  opacity: 1;
+}
+
+.slider .circle {
+  padding: 50px 25px 50px 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  height: 45vh;
+  width: 45vh;
+  align-items: start;
+}
+.circle .btn,
+.features .btn {
+  color: var(--text);
+  margin-left: -20px;
+  margin-top: 30px !important;
+}
+.circle .btn::before,
+.features .btn::before {
+  background-color: var(--text);
+}
+.circle .btn:hover button,
+.features .btn:hover button {
+  color: var(--primary-color);
+}
+.circle .btn .i,
+.features .btn .i {
+  background-color: var(--text);
+  color: var(--primary-color);
+}
+
+/*features section*/
+.features {
+  margin-block: 60px;
+}
+.features .container {
+  padding: 0 80px;
+}
+.features .container .card-container {
+  overflow: hidden;
+}
+
+.features .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0%, 70%);
+  padding: 10px 20px;
+  height: 100%;
+  width: 70% !important;
+  border-radius: 10px;
+  background: rgba(149, 30, 58, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(149, 30, 58, 0.3);
+  -webkit-transform: translate(0%, 70%);
+  -moz-transform: translate(0%, 70%);
+  -ms-transform: translate(0%, 70%);
+  -o-transform: translate(0%, 70%);
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+.card:hover {
+  transform: translate(0%, 0%);
+}
+.card p {
+  text-overflow: ellipsis;
+}
+.card .btn {
+  margin-top: 0px !important;
+}
+.card p {
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) to the overflow text */
+  width: 100%; /* Ensure the width is defined */
+}
+.card p.expand {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  width: 100%;
+}
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .features .container {
+    padding: 0 40px;
+  }
+  .features .card {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .features .container {
+    padding: 0 20px;
+  }
+  .features .card {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features .container {
+    padding: 0 10px;
+  }
+  .features .card {
+    padding: 10px 10px;
+  }
+}

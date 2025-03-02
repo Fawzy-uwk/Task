@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Al Jidara</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #951e3a;
+        --color-text: #ffff;
+        --color-gray: #c5cecb;
+        --color-dark: #0c3980;
+        --color-bg: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Hero Section -->
+    <section
+      class="hero min-h-auto sm:h-[100dvh] w-full relative flex items-center justify-center flex-col mb-24"
+    >
+      <video
+        src="./Assets/Header.mp4"
+        autoplay
+        muted
+        loop
+        class="absolute top-0 right-0 w-full h-full object-cover"
+      ></video>
+      <div class="banner z-50">
+        <h1 class="text-3xl text-white capitalize text-center font-bold">
+          shaping ecomnomics,<br />
+          transforming communities.
+        </h1>
+        <p class="text-gray text-center leading-4 w-[75%]">
+          Founded in 1999, with the vision to be the consultant of choice for
+          developing economies in Jordan and the Middle East.
+        </p>
+        <div class="btn">
+          <button class="text-white mt-4 text-center">Get a qoute</button>
+          <div class="i">
+            <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+          </div>
+        </div>
+        <img class="mouse w-20" src="./Assets/Image/gif-header.gif" />
+      </div>
+
+      <div
+        class="px-20 w-full flex items-center justify-center top-15 relative"
+      >
+        <div class="container flex items-center w-[90%] gap-8 bg-primary z-50">
+          <div class="px-5 flex gap-2 flex-1 flex-col">
+            <h1 class="text-3xl text-text font-bold">Our Track Record</h1>
+            <p class="text-sm font-light text-gray">
+              With nearly 30 years of service, Al Jidara has excelled in
+              development consulting, playing key roles in projects supported by
+              prominent entities such as USAID, EU, EBRD, UN agencies, ILO, and
+              the World Bank.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1">
+            <!-- Item 1 -->
+            <div class="flex items-center gap-2">
+              <h2 class="text-2xl sm:text-3xl text-text font-bold">70</h2>
+              <div class="flex flex-col leading-3">
+                <span class="text-2xl sm:text-3xl text-text font-bold">+</span>
+                <span
+                  class="text-xs sm:text-sm font-light text-gray capitalize mt-0"
+                  >Project managed</span
+                >
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex items-center gap-2">
+              <h2 class="text-2xl sm:text-3xl text-text font-bold">400</h2>
+              <div class="flex flex-col leading-3">
+                <span class="text-2xl sm:text-3xl text-text font-bold">+</span>
+                <span class="text-xs sm:text-sm font-light text-gray capitalize"
+                  >consultancies managed</span
+                >
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex items-center gap-2">
+              <h2 class="text-2xl sm:text-3xl text-text font-bold">400</h2>
+              <div class="flex flex-col leading-3">
+                <span class="text-2xl sm:text-3xl text-text font-bold">+</span>
+                <span class="text-xs sm:text-sm font-light text-gray capitalize"
+                  >clients & partners</span
+                >
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex items-center gap-2">
+              <h2 class="text-2xl sm:text-3xl text-text font-bold">1500</h2>
+              <div class="flex flex-col leading-3">
+                <span class="text-2xl sm:text-3xl text-text font-bold">+</span>
+                <span class="text-xs sm:text-sm font-light text-gray capitalize"
+                  >Consultants in our pool of consultants</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="./Assets/Jidara/Line.png"
+            alt="Decorative Line"
+            class="absolute top-0 right-0 sm:right-80 h-full sm:w-[50%] w-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--curr Projects-->
+    <section class="curr bg-white w-full h-full relative">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-5 sm:gap-10 gap-6">
+          <div class="sm:col-span-2 col-span-8 flex items-start gap-4 flex-col">
+            <span
+              class="text-xs sm:text-sm font-semibold text-gray-400 capitalize"
+              >Current Projects</span
+            >
+            <h2
+              class="text-xl sm:text-2xl text-primary font-bold capitalize w-full sm:w-[90%]"
+            >
+              showcasing our impactful current projects
+            </h2>
+            <div class="btn btn2">
+              <button class="text-dark mt-4">View all projects</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm:col-span-3 col-span-8 divide-y divide-gray z-50">
+            <div class="flex items-center gap-10">
+              <div class="flex items-start flex-col gap-6">
+                <span class="text-sm text-primary font-light">2023-2024</span>
+                <h3 class="text-lg text-dark font-semibold">
+                  The Local Health System Sustainability Project (LHSS) under
+                  the USAID Integrated Health Systems IDIQ
+                </h3>
+                <p class="proj text-sm text-black">
+                  LHSS under the USAID Integrated Health Systems IDIQ,
+                  facilitates the transition of low- and middle-income countries
+                  towards sustainable, self-financed health systems to support
+                  universal health coverage.
+                </p>
+              </div>
+              <button class="arrow">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </button>
+            </div>
+
+            <div class="flex items-center gap-10 py-6">
+              <div class="flex items-start flex-col gap-6">
+                <span class="his text-sm text-primary font-light"
+                  >2023-2024</span
+                >
+                <h3 class="text-lg text-dark font-semibold">
+                  The Local Health System Sustainability Project (LHSS) under
+                  the USAID Integrated Health Systems IDIQ
+                </h3>
+                <p class="proj text-sm text-black">
+                  LHSS under the USAID Integrated Health Systems IDIQ,
+                  facilitates the transition of low- and middle-income countries
+                  towards sustainable, self-financed health systems to support
+                  universal health coverage.
+                </p>
+              </div>
+              <button class="arrow">
+                <i class="fa-solid fa-arrow-right fa-rotate-by"></i>
+              </button>
+            </div>
+
+            <div class="flex items-center gap-10 py-6">
+              <div class="flex items-start flex-col gap-6">
+                <span class="his text-sm text-primary font-light"
+                  >2023-2024</span
+                >
+                <h3 class="text-lg text-dark font-semibold">
+                  The Local Health System Sustainability Project (LHSS) under
+                  the USAID Integrated Health Systems IDIQ
+                </h3>
+                <p class="proj text-sm text-black">
+                  LHSS under the USAID Integrated Health Systems IDIQ,
+                  facilitates the transition of low- and middle-income countries
+                  towards sustainable, self-financed health systems to support
+                  universal health coverage.
+                </p>
+              </div>
+              <button class="arrow">
+                <i class="fa-solid fa-arrow-right fa-rotate-by"></i>
+              </button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Assets/Jidara/Red pattern.png"
+        class="sm:absolute h-full -top-8 -left-20 hidden sm:block"
+      />
+    </section>
+
+    <!--Sustainability-->
+    <section
+      class="suss w-full text-text flex items-center justify-center flex-col"
+    >
+      <span
+        class="text-xs sm:text-sm font-light text-gray text-center capitalize"
+        >Sustainability</span
+      >
+      <h2 class="text-xl text-primary font-bold text-center capitalize">
+        driving economic development with precision
+      </h2>
+      <div class="slider z-10 relative">
+        <div class="rounded-md relative overflow-hidden">
+          <img src="/Assets/Image/1.png" class="object-cover rounded-md" />
+
+          <div
+            class="circle absolute -bottom-20 -left-12 rounded-full bg-primary text-text flex items-center justify-start flex-col hidden sm:block"
+          >
+            <h1 class="text-xl">What?</h1>
+            <p class="text-sm text-gray font-light">
+              what are the methods sustainable development work with Al-Jidara
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-md overflow-hidden">
+          <img src="/Assets/Image/2.png" class="object-cover rounded-md" />
+          <div
+            class="circle absolute -bottom-20 -left-12 rounded-full bg-primary text-text flex items-center justify-start flex-col hidden sm:block"
+          >
+            <h1 class="text-xl">What?</h1>
+            <p class="text-sm text-gray font-light">
+              what are the methods sustainable development work with Al-Jidara
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-md overflow-hidden">
+          <img src="/Assets/Image/3.png" class="object-cover rounded-md" />
+          <div
+            class="circle absolute -bottom-20 -left-12 rounded-full bg-primary text-text flex items-center justify-start flex-col hidden sm:block"
+          >
+            <h1 class="text-xl">What?</h1>
+            <p class="text-sm text-gray font-light">
+              what are the methods sustainable development work with Al-Jidara
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-10 z-50">
+        <button class="arrow2 left slick-prev">
+          <i class="fa-solid fa-arrow-right fa-rotate-by"></i>
+        </button>
+        <button class="arrow2 right slick-next z-50">
+          <i class="fa-solid fa-arrow-right fa-rotate-by"></i>
+        </button>
+      </div>
+    </section>
+
+    <!--Features-->
+
+    <section
+      class="features w-full h-full relative flex items-center justify-center flex-col gap-6 sm:gap-14"
+    >
+      <div class="flex items-center flex-col text-center gap-2">
+        <span class="capitalize text-md text-gray text-center"
+          >Features news`s</span
+        >
+        <h2 class="capitalize text-xl text-primary font-semibold text-center">
+          stay updated with the latest highlights
+        </h2>
+      </div>
+
+      <div
+        class="container flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap"
+      >
+        <div class="relative card-container">
+          <img
+            src="/Assets/Image/Rectangle 38.png"
+            class="h-full w-full object-cover rounded-sm"
+          />
+          <div class="card flex items-start justify-start flex-col gap-6">
+            <span class="capitalize text-sm font-light text-gray"
+              >15 jul 2024</span
+            >
+            <h2 class="text-lg text-text">Lorem ipsum dolor sit amet</h2>
+            <p class="text text-sm text-gray font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec.lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nunc tincidunt, nunc nec.
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative card-container">
+          <img
+            src="/Assets/Image/Rectangle 38.png"
+            class="h-full w-full object-cover rounded-sm"
+          />
+          <div class="card flex items-start justify-start flex-col gap-6">
+            <span class="capitalize text-sm font-light text-gray"
+              >15 jul 2024</span
+            >
+            <h2 class="text-lg text-text">Lorem ipsum dolor sit amet</h2>
+            <p class="text text-sm text-gray font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec.lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nunc tincidunt, nunc nec.
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative card-container">
+          <img
+            src="/Assets/Image/Rectangle 38.png"
+            class="h-full w-full object-cover rounded-sm"
+          />
+          <div class="card flex items-start justify-start flex-col gap-6">
+            <span class="capitalize text-sm font-light text-gray"
+              >15 jul 2024</span
+            >
+            <h2 class="text-lg text-text">Lorem ipsum dolor sit amet</h2>
+            <p class="text text-sm text-gray font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec.lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nunc tincidunt, nunc nec.
+            </p>
+            <div class="btn">
+              <button class="text-white mt-4 text-center">Get a qoute</button>
+              <div class="i">
+                <i class="fa-solid fa-arrow-right fa-rotate-by text-center"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="text/javascript" src="Script.js"></script>
+  </body>
+</html>
