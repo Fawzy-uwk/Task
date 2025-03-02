@@ -247,15 +247,15 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  height: 45vh;
-  width: 45vh;
+  height: 40vh;
+  width: 40vh;
   align-items: start;
 }
 .circle .btn,
 .features .btn {
   color: var(--text);
   margin-left: -20px;
-  margin-top: 30px !important;
+  
 }
 .circle .btn::before,
 .features .btn::before {
@@ -269,6 +269,48 @@ body {
 .features .btn .i {
   background-color: var(--text);
   color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px )  {
+  .features .container {
+    padding: 0 40px;
+  }
+  .features .card {
+    width: 80% !important;
+  }
+  .slider .circle {
+    height: 35vh;
+    width: 35vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .features .container {
+    padding: 0 20px;
+  }
+  .features .card {
+    width: 90% !important;
+    padding: 10px 15px;
+  }
+  .slider .circle {
+    height: 35vh;
+    width: 35vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .features .container {
+    padding: 0 10px;
+  }
+  .features .card {
+    width: 100% !important;
+    padding: 10px 10px;
+  }
+  .slider .circle {
+    height: 25vh;
+    width: 25vh;
+  }
 }
 
 /*features section*/
