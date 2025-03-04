@@ -63,7 +63,7 @@ body {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  margin-left: -15px;
+
   transition: transform 0.6s ease-in-out;
   -webkit-transition: transform 0.6s ease-in-out;
   -moz-transition: transform 0.6s ease-in-out;
@@ -494,6 +494,7 @@ body {
 
 .arabic-version {
   text-align: right !important;
+  overflow-x: hidden !important;
 }
 .arabic-version .parent .arrow i {
   transform: rotate(45deg);
@@ -592,4 +593,17 @@ body {
 .arabic-version .features .card,
 .arabic-version .slider .card {
   right: 0 !important;
+}
+.arabic-version .circle .btn,
+.arabic-version .features .btn {
+  color: var(--text);
+  margin-right: -20px;
+}
+
+.arabic-version .btn:hover{
+  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
 }
