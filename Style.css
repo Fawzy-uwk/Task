@@ -12,19 +12,40 @@
   --text-dark: #0c3980;
   --bg: #ffffff;
 }
-
+::-webkit-scrollbar {
+  width: 0px;
+}
 body {
   font-family: "Alexandria", sans-serif;
   overflow-x: hidden;
 }
 
+/* Base styles */
 .hero .banner {
   padding: 150px 0 0 0;
-  gap: 50px;
+  gap: 25px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero .banner {
+    padding: 100px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .banner {
+    padding: 150px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .banner {
+    padding: 80px 0 0 0;
+  }
 }
 
 /*Button animation*/
@@ -42,10 +63,12 @@ body {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-}
-
-.btn.btn2 {
-  padding: 0 20px 0 5px;
+  margin-left: -15px;
+  transition: transform 0.6s ease-in-out;
+  -webkit-transition: transform 0.6s ease-in-out;
+  -moz-transition: transform 0.6s ease-in-out;
+  -ms-transition: transform 0.6s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out;
 }
 
 .btn:before {
@@ -77,11 +100,16 @@ body {
   -o-transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
 }
+
 .btn button {
   position: relative;
-  z-index: 1; /* Ensure text is above the animation */
-
+  z-index: 10;
+  transition: all 1s ease-in-out;
   width: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 
 .i i {
@@ -93,27 +121,46 @@ body {
 }
 .btn:hover button {
   color: var(--text);
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
+
 .btn:hover i {
   transform: rotate(-45deg);
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
 }
+
 .btn:hover .i {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  transition: all 1s ease-out;
+}
+
+.btn:hover {
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 /*****************/
 
 /*About section*/
-.hero {
-  margin-bottom: 100px;
-}
-.hero .container {
-  padding: 50px 30px !important;
+
+.curr .container1 {
+  padding: 50px !important;
   border-radius: 100px 10px 100px 10px;
   -webkit-border-radius: 100px 10px 100px 10px;
   -moz-border-radius: 100px 10px 100px 10px;
@@ -122,8 +169,26 @@ body {
 }
 
 /*current projects*/
-.curr .container {
-  padding: 50px 80px 120px 80px !important;
+.curr .parent {
+  padding: 0px 80px 120px 80px !important;
+}
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .curr .parent {
+    padding: 0px 20px 100px 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .curr .parent {
+    padding: 0px 10px 80px 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .curr .parent {
+    padding: 0px 20px 60px 20px !important;
+  }
 }
 
 .proj {
@@ -183,6 +248,10 @@ body {
   font-size: 20px;
   z-index: 1;
   transition: all 0.5s ease-in-out;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 .arrow2 i {
   transform: rotate(0deg);
@@ -209,31 +278,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 0px;
 }
 .slider img {
   width: 100%;
-  /* Adjust as needed */
+  /*Adjustasneeded*/
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  margin: auto;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.slider .card {
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  width: 70% !important;
+}
+
+.slider .slick-slide:hover .card {
+  transform: translate(0%, 0%);
 }
 .slick-center {
   transform: scale(1) !important;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
   -webkit-transform: scale(1) !important;
   -moz-transform: scale(1) !important;
   -ms-transform: scale(1) !important;
   -o-transform: scale(1) !important;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
 
 .slick-slide {
   transition: transform 0.5s ease;
+
   transform: scale(0.8);
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -ms-transform: scale(0.8);
   -o-transform: scale(0.8);
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
 }
 
 .slick-center ~ .slick-slide {
@@ -241,21 +335,22 @@ body {
 }
 
 .slider .circle {
-  padding: 50px 25px 50px 70px;
+  padding: 7% 6% 0 10%;
   border-radius: 50%;
+  width: 42%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  height: 40vh;
-  width: 40vh;
-  align-items: start;
 }
+
 .circle .btn,
 .features .btn {
   color: var(--text);
   margin-left: -20px;
-  
 }
 .circle .btn::before,
 .features .btn::before {
@@ -272,16 +367,12 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 1024px )  {
+@media (max-width: 1024px) {
   .features .container {
     padding: 0 40px;
   }
   .features .card {
     width: 80% !important;
-  }
-  .slider .circle {
-    height: 30vh;
-    width: 30vh;
   }
 }
 
@@ -293,10 +384,6 @@ body {
     width: 90% !important;
     padding: 10px 15px;
   }
-  .slider .circle {
-    height: 30vh;
-    width: 30vh;
-  }
 }
 
 @media (max-width: 480px) {
@@ -306,10 +393,6 @@ body {
   .features .card {
     width: 100% !important;
     padding: 10px 10px;
-  }
-  .slider .circle {
-    height: 25vh;
-    width: 25vh;
   }
 }
 
@@ -324,13 +407,14 @@ body {
   overflow: hidden;
 }
 
-.features .card {
+.features .card,
+.slider .card {
   position: absolute;
   top: 0;
   left: 0;
   transform: translate(0%, 70%);
   padding: 10px 20px;
-  height: 100%;
+  min-height: 100%;
   width: 70% !important;
   border-radius: 10px;
   background: rgba(149, 30, 58, 0.57);
@@ -349,9 +433,7 @@ body {
   -ms-transition: transform 0.5s ease;
   -o-transition: transform 0.5s ease;
 }
-.card:hover {
-  transform: translate(0%, 0%);
-}
+
 .card p {
   text-overflow: ellipsis;
 }
@@ -367,8 +449,11 @@ body {
 .card p.expand {
   white-space: normal;
   overflow: visible;
-  text-overflow: clip;
+
   width: 100%;
+}
+.card-container:hover .card {
+  transform: translate(0%, 0%);
 }
 /* Responsive styles */
 @media (max-width: 1024px) {
@@ -377,6 +462,11 @@ body {
   }
   .features .card {
     width: 70% !important;
+    overflow-y: scroll;
+  }
+  .card .btn {
+    margin-left: -20px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -385,7 +475,8 @@ body {
     padding: 0 20px;
   }
   .features .card {
-    padding: 10px 15px;
+    padding: 5px 10px;
+    overflow-y: scroll !important;
   }
 }
 
@@ -394,6 +485,111 @@ body {
     padding: 0 10px;
   }
   .features .card {
-    padding: 10px 10px;
+    padding: 5px 5px;
+    overflow-y: scroll;
   }
+}
+
+/*Arabic Version*/
+
+.arabic-version {
+  text-align: right !important;
+}
+.arabic-version .parent .arrow i {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.arabic-version .btn::before {
+  left: 0px !important;
+  right: 0;
+}
+.arabic-version .btn:hover::before {
+  width: calc(100% + 50px);
+}
+.arabic-version .btn:hover i {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.arabic-version .arrow,
+.arabic-version .arrow2 {
+  border-radius: 50%;
+  border: solid 1px var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.arabic-version .arrow2 {
+  padding: 25px;
+}
+
+.arabic-version .arrow::before,
+.arabic-version .arrow2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform: translateX(-100%); /* Changed for RTL */
+  transition: transform 0.5s ease-in-out;
+}
+
+.arabic-version .arrow2.left::before {
+  transform: translateX(100%); /* Changed for RTL */
+}
+
+.arabic-version .arrow:hover::before,
+.arabic-version .arrow2:hover::before {
+  transform: translateX(0); /* Same for RTL */
+}
+
+.arabic-version .arrow i,
+.arabic-version .arrow2 i {
+  position: relative;
+  transform: rotate(-45deg);
+  color: var(--primary-color);
+  font-size: 20px;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.arabic-version .arrow2 i {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.arabic-version .arrow:hover i,
+.arabic-version .arrow2:hover i {
+  color: var(--text);
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.arabic-version .features .card,
+.arabic-version .slider .card {
+  right: 0 !important;
 }

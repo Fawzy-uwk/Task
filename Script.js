@@ -1,8 +1,10 @@
 $(document).ready(function () {
-  $(".slider").slick({
+  $(".slider:not(.arabic-version .slider)").slick({
     centerMode: true,
     centerPadding: "25%",
     slidesToShow: 1,
+    cssEase: "linear",
+
     arrows: true,
     prevArrow: $(".slick-prev"),
     nextArrow: $(".slick-next"),
@@ -13,7 +15,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "15%",
+          centerPadding: "4%",
           slidesToShow: 1,
           infinte: false,
         },
@@ -23,7 +25,41 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "10%",
+          centerPadding: "2%",
+          slidesToShow: 1,
+          infinte: false,
+        },
+      },
+    ],
+  });
+
+  $(".arabic-version .slider").slick({
+    centerMode: true,
+    centerPadding: "25%",
+    slidesToShow: 1,
+    cssEase: "linear",
+    rtl: true,
+    arrows: true,
+    prevArrow: $(".slick-prev"),
+    nextArrow: $(".slick-next"),
+    infinte: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "4%",
+          slidesToShow: 1,
+          infinte: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "2%",
           slidesToShow: 1,
           infinte: false,
         },
