@@ -370,7 +370,7 @@ body {
 /* Responsive styles */
 @media (max-width: 1024px) {
   .features .container {
-    padding: 0 40px;
+    padding: 0 20px;
   }
   .features .card {
     width: 80% !important;
@@ -389,11 +389,11 @@ body {
 
 @media (max-width: 480px) {
   .features .container {
-    padding: 0 10px;
+    padding: 0 15px;
   }
   .features .card {
     width: 100% !important;
-    padding: 10px 10px;
+    padding: 10px 15px;
   }
 }
 
@@ -402,7 +402,7 @@ body {
   margin-block: 60px;
 }
 .features .container {
-  padding: 0 80px;
+  padding: 0 10px;
 }
 .features .container .card-container {
   overflow: hidden;

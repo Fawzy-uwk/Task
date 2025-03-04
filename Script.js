@@ -11,6 +11,17 @@ $(document).ready(function () {
     infinte: false,
     responsive: [
       {
+        breakpoint: 1024, // iPad Pro breakpoint
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "10%",
+          slidesToShow: 1,
+          infinite: false,
+        },
+      },
+
+      {
         breakpoint: 768,
         settings: {
           arrows: true,
@@ -44,6 +55,18 @@ $(document).ready(function () {
     nextArrow: $(".slick-next"),
     infinte: false,
     responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "2%",
+          slidesToShow: 1,
+          infinite: false,
+        }, // iPad Pro breakpoint
+      },
+      
+
       {
         breakpoint: 768,
         settings: {
